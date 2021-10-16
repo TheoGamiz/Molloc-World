@@ -1,8 +1,25 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include "Map.h"
+#include "MapGraphic.h"
 
+static void ConstruireZone(Zone_Map zone, int largeur, int hauteur)
+{
+    Map * map = Creer_Map(zone, largeur, hauteur);
+
+    Remplir_Map(map);
+
+    Afficher_Map(map);
+    Afficher_MapGraphic(map);
+
+    Detruire_Map(map);
+}
 
 int main()
 {
-    printf("PROJET JEU MALLOC WORLD");
+    ConstruireZone(ZONE1, 10, 10);
+    ConstruireZone(ZONE2, 10, 20);
+    ConstruireZone(ZONE3, 30, 30);
+
+    printf("\n< Appuyer sur une touche >");
+    getchar();
 }
