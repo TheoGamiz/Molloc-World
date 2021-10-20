@@ -2,6 +2,9 @@
 #include "Map.h"
 #include "MapGraphic.h"
 
+#include "sources/source/player.c"
+#include "sources/source/item_list.c"
+
 static void ConstruireZone(Zone_Map zone, int largeur, int hauteur)
 {
     Map * map = Creer_Map(zone, largeur, hauteur);
