@@ -19,6 +19,10 @@ static void ConstruireZone(Zone_Map zone, int largeur, int hauteur)
 
 int main()
 {
+    //commande pour initialiser la banque des items ainsi que le joueur
+    itemList *item = initItemList();
+    Player *hero = initPlayer();
+    
     ConstruireZone(ZONE1, 10, 10);
     ConstruireZone(ZONE2, 10, 20);
     ConstruireZone(ZONE3, 30, 30);
